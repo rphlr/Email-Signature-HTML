@@ -1,0 +1,142 @@
+<html>
+
+<head>
+	<!-- This section of the code is dedicated to styling the different elements of the email signature -->
+	<style>
+		body {
+			font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+			max-width: 500px;
+		}
+
+		/* Styles for the left column of the table */
+		.left-column {
+			width: 50%;
+			text-align: center;
+		}
+
+		/* Styles for the H1 element of the left column */
+		.left-column h1 {
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		/* Styles for the H2 element of the left column */
+		.left-column h2 {
+			font-size: 14px;
+		}
+
+		/* Styles for the right column of the table */
+		.right-column {
+			width: 50%;
+			text-align: left;
+			box-sizing: border-box;
+			padding: 0px 0px 10px;
+		}
+
+		/* Styles for the H1 element of the right column */
+		.right-column h1 {
+			text-align: left;
+			font-weight: bold;
+		}
+
+		/* Styles for the P element of the right column */
+		.right-column p {
+			font-size: 14px;
+		}
+
+		/* Styles for the IMG element of the right column */
+		.right-column img {
+			height: 16px;
+		}
+
+		/* Styles for the footer section of the signature */
+		.footer {
+			border-top: 1px solid rgb(0, 0, 0);
+			text-align: justify;
+			font-size: 8pt;
+			line-height: 1.2;
+			color: rgb(128, 128, 128);
+		}
+
+		/* Styles for the photo */
+		.photo {
+			max-width: 124px;
+			border-radius: 50%;
+		}
+
+		/* Styles for the social media icons */
+		.social {
+		  overflow: auto;
+		  display:flex;
+		  align-items:center;
+		  justify-content: center
+		}
+
+		.social::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+		.social img {
+			border: 0px;
+			max-width: 15px;
+			height: auto;
+			float: left;
+			margin-right: 2px;
+		}
+	</style>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td class="left-column">
+				<!-- Link to personal website -->
+				<a href="https://www.rphlr.ch" target="_blank">
+					<!-- Photo -->
+					<img class="photo" src="https://rphlr.ch/signature-email-logos/photo.webp" alt="Photo of Raphael Rouiller">
+					<br><br>
+				</a>
+				<!-- Social media links -->
+				<div class="social">
+					<a href="https://www.linkedin.com/in/rphlr" target="_blank">
+						<img alt="Linkedin icon" src="https://rphlr.ch/signature-email-logos/ln.webp">
+					</a>&emsp;
+					<a href="https://github.com/rphlr" target="_blank">
+						<img alt="Github icon" src="https://rphlr.ch/signature-email-logos/gu.webp">
+					</a>
+				</div>
+			</td>
+			<td class="right-column" valign="top">
+				<div>
+					<!-- Personal name and occupation -->
+					<h1>Rouiller Raphael</h1>
+					<h2>Informaticien et dessinateur industriel</h2>
+					<p>
+						<img src="https://rphlr.ch/signature-email-logos/email-icon.webp" alt="Email icon"> <a href="mailto:raphaelrouiller@pm.me">raphaelrouiller@pm.me</a>
+						<br>
+						<img src="https://rphlr.ch/signature-email-logos/mobile-icon.webp" alt="Phone icon"> <a href="tel:+41 79 657 86 12">+41 79 657 86 12</a>
+						<br>
+						<img src="https://rphlr.ch/signature-email-logos/address-icon.webp" alt="Address icon"> Chemin de la Preyse 1, 1902 Evionnaz
+						<br>
+						<img src="https://rphlr.ch/signature-email-logos/website-icon.webp" alt="Website icon"> <a href="https://rphlr.ch">rphlr.ch</a>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<!-- footer section starts here -->
+			<td colspan="2" class="footer">
+				<p>Le contenu de cet e-mail est confidentiel et destiné uniquement au destinataire spécifié dans le
+					message. Il est strictement interdit de partager toute partie de ce message avec une tierce partie,
+					sans le consentement écrit de l'expéditeur. Si vous avez reçu ce message par erreur, merci de
+					répondre à ce message et de suivre sa suppression, afin que nous puissions nous assurer qu'une telle
+					erreur ne se reproduise pas à l'avenir.
+				</p>
+			</td>
+			<!-- footer section ends here -->
+		</tr>
+	</table>
+</body>
+
+</html>

@@ -1,11 +1,56 @@
 <html>
 
 <head>
+	<!-- Declaring JavaScript variables for contact information, website, and personal statement -->
+	<script>
+		var name = "Rouiller Raphael";
+		var title = "Informaticien et dessinateur industriel"
+		var email = "raphaelrouiller@pm.me";
+		var phone = "+41 79 657 86 12";
+		var address = "Chemin de la Preyse 1, 1902 Evionnaz";
+		var website = "rphlr.ch";
+		var footer = "Le contenu de cet e-mail est confidentiel et destiné uniquement au destinataire spécifié dans le message. Il est strictement interdit de partager toute partie de ce message avec une tierce partie, sans le consentement écrit de l'expéditeur. Si vous avez reçu ce message par erreur, merci de répondre à ce message et de suivre sa suppression, afin que nous puissions nous assurer qu'une telle erreur ne se reproduise pas à l'avenir.";
+		var personal_photo = "https://rphlr.ch/signature-email-logos/photo.webp";
+		var linkedin = "https://linkedin.com/in/rphlr";
+		var github = "https://github.com/rphlr";
+	</script>
 	<!-- This section of the code is dedicated to styling the different elements of the email signature -->
 	<style>
+		/* Declaring styles for the body of the email signature */
 		body {
 			font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+			color: #47167D;
 			max-width: 500px;
+			background-color: #EFEFEF;
+		}
+
+		/* Styles for the links in the email signature */
+		body a {
+			text-decoration: none;
+			color: #765996;
+		}
+
+		/* Styles for the visited links in the email signature */
+		body a:visited {
+			text-decoration: none;
+			color: #765996;
+		}
+
+		/* Styles for the hover links in the email signature */
+		body a:hover {
+			text-decoration: none;
+			color: #47167D;
+		}
+
+		/* Styles for the active links in the email signature */
+		body a:active {
+			text-decoration: none;
+			color: #765996;
+		}
+
+		/* Styles for the paragraphs in the email signature */
+		body p {
+			color: #765996;
 		}
 
 		/* Styles for the left column of the table */
@@ -51,11 +96,12 @@
 
 		/* Styles for the footer section of the signature */
 		.footer {
-			border-top: 1px solid rgb(0, 0, 0);
+			border-top: 1px solid #47167D;
+			border-spacing: 5px;
 			text-align: justify;
 			font-size: 8pt;
 			line-height: 1.2;
-			color: rgb(128, 128, 128);
+			color: #765996;
 		}
 
 		/* Styles for the photo */
@@ -64,20 +110,15 @@
 			border-radius: 50%;
 		}
 
-		/* Styles for the social media icons */
+		/* Styles for the social media */
 		.social {
-		  overflow: auto;
-		  display:flex;
-		  align-items:center;
-		  justify-content: center
+			overflow: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center
 		}
 
-		.social::after {
-		  content: "";
-		  clear: both;
-		  display: table;
-		}
-
+		/* Styles for the IMG element of the social media icons */
 		.social img {
 			border: 0px;
 			max-width: 15px;
@@ -93,50 +134,121 @@
 		<tr>
 			<td class="left-column">
 				<!-- Link to personal website -->
-				<a href="https://www.rphlr.ch" target="_blank">
-					<!-- Photo -->
-					<img class="photo" src="https://rphlr.ch/signature-email-logos/photo.webp" alt="Photo of Raphael Rouiller">
-					<br><br>
-				</a>
+				<!-- Photo -->
+				<span id="personal_photo-var"></span>
+				<br><br>
 				<!-- Social media links -->
 				<div class="social">
-					<a href="https://www.linkedin.com/in/rphlr" target="_blank">
-						<img alt="Linkedin icon" src="https://rphlr.ch/signature-email-logos/ln.webp">
-					</a>&emsp;
-					<a href="https://github.com/rphlr" target="_blank">
-						<img alt="Github icon" src="https://rphlr.ch/signature-email-logos/gu.webp">
-					</a>
+					<span id="linkedin-var"></span>&emsp;<span id="github-var"></span>
 				</div>
 			</td>
 			<td class="right-column" valign="top">
 				<div>
 					<!-- Personal name and occupation -->
-					<h1>Rouiller Raphael</h1>
-					<h2>Informaticien et dessinateur industriel</h2>
+					<h1 id="name-var"></h1>
+					<h2 id="title-var"></h2>
 					<p>
-						<img src="https://rphlr.ch/signature-email-logos/email-icon.webp" alt="Email icon"> <a href="mailto:raphaelrouiller@pm.me">raphaelrouiller@pm.me</a>
+						<img src="https://rphlr.ch/signature-email-logos/email-icon.webp" alt="Email icon"> <span
+							id="email-var"></span>
 						<br>
-						<img src="https://rphlr.ch/signature-email-logos/mobile-icon.webp" alt="Phone icon"> <a href="tel:+41 79 657 86 12">+41 79 657 86 12</a>
+						<img src="https://rphlr.ch/signature-email-logos/mobile-icon.webp" alt="Phone icon"> <span
+							id="phone-var"></span>
 						<br>
-						<img src="https://rphlr.ch/signature-email-logos/address-icon.webp" alt="Address icon"> Chemin de la Preyse 1, 1902 Evionnaz
+						<img src="https://rphlr.ch/signature-email-logos/address-icon.webp" alt="Address icon"> <span
+							id="address-var"></span>
 						<br>
-						<img src="https://rphlr.ch/signature-email-logos/website-icon.webp" alt="Website icon"> <a href="https://rphlr.ch">rphlr.ch</a>
+						<img src="https://rphlr.ch/signature-email-logos/website-icon.webp" alt="Website icon"> <span
+							id="website-var"></span>
+					</p>
 				</div>
 			</td>
 		</tr>
 		<tr>
 			<!-- footer section starts here -->
 			<td colspan="2" class="footer">
-				<p>Le contenu de cet e-mail est confidentiel et destiné uniquement au destinataire spécifié dans le
-					message. Il est strictement interdit de partager toute partie de ce message avec une tierce partie,
-					sans le consentement écrit de l'expéditeur. Si vous avez reçu ce message par erreur, merci de
-					répondre à ce message et de suivre sa suppression, afin que nous puissions nous assurer qu'une telle
-					erreur ne se reproduise pas à l'avenir.
-				</p>
+				<span id="footer-var"></span>
 			</td>
 			<!-- footer section ends here -->
 		</tr>
 	</table>
+	<script>
+		// creating the link to personal website using the personal_photo variable and the personal_photoSpan element.
+		var personal_photoSpan = document.getElementById("personal_photo-var");
+		var link = document.createElement("a");
+		link.href = "https://" + website;
+		link.target = "_blank";
+		var image = document.createElement("img");
+		image.src = personal_photo;
+		image.className = "photo"
+		image.alt = "Photo";
+		link.appendChild(image);
+		personal_photoSpan.innerHTML = '';
+		personal_photoSpan.appendChild(link);
+
+		// creating the link to linkedin profile using the linkedin variable and the linkedinSpan element.
+		var linkedinSpan = document.getElementById("linkedin-var");
+		var link = document.createElement("a");
+		link.href = linkedin;
+		link.target = "_blank";
+		var image = document.createElement("img");
+		image.src = "https://rphlr.ch/signature-email-logos/linkedin-icon.webp";
+		image.alt = "Linkedin icon";
+		link.appendChild(image);
+		linkedinSpan.innerHTML = '';
+		linkedinSpan.appendChild(link);
+
+		// creating the link to github profile using the github variable and the githubSpan element.
+		var githubSpan = document.getElementById("github-var");
+		var link = document.createElement("a");
+		link.href = github;
+		link.target = "_blank";
+		var image = document.createElement("img");
+		image.src = "https://rphlr.ch/signature-email-logos/github-icon.webp";
+		image.alt = "Github icon";
+		link.appendChild(image);
+		githubSpan.innerHTML = '';
+		githubSpan.appendChild(link);
+
+		// displaying the name using the name variable and the nameSpan element.
+		var nameSpan = document.getElementById("name-var");
+		nameSpan.innerHTML = name;
+
+		// displaying the title using the title variable and the titleSpan element.
+		var titleSpan = document.getElementById("title-var");
+		titleSpan.innerHTML = title;
+
+		// creating the link to the email using the email variable and the emailSpan element.
+		var emailSpan = document.getElementById("email-var");
+		var link = document.createElement("a");
+		link.href = "mailto:" + email;
+		link.innerHTML = email;
+		emailSpan.innerHTML = '';
+		emailSpan.appendChild(link);
+
+		// creating the link to the phone using the phone variable and the phoneSpan element.
+		var phoneSpan = document.getElementById("phone-var");
+		var link = document.createElement("a");
+		link.href = "tel:" + phone;
+		link.innerHTML = phone;
+		phoneSpan.innerHTML = '';
+		phoneSpan.appendChild(link);
+
+		// displaying the address using the address variable and the addressSpan element.
+		var addressSpan = document.getElementById("address-var");
+		addressSpan.innerHTML = address;
+
+		// creating the link to the website using the website variable and the websiteSpan element.
+		var websiteSpan = document.getElementById("website-var");
+		var link = document.createElement("a");
+		link.href = "https://" + website;
+		link.innerHTML = website;
+		websiteSpan.innerHTML = '';
+		websiteSpan.appendChild(link);
+
+		// displaying the footer using the footer variable and the footerSpan element.
+		var footerSpan = document.getElementById("footer-var");
+		footerSpan.innerHTML = footer;
+	</script>
 </body>
 
 </html>
